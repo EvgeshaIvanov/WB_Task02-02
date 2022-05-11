@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AnalysisOfAlgorithmsApp</string>
+    <string-array name="sorting">
+        <item> Пузырьковая сортировка </item>
+        <item> Шейкерная сортировка </item>
+        <item> Сортировка Шелла </item>
+        <item> Сортировка вставками </item>
+    </string-array>
+    <string-array name="structure">
+        <item> Массив </item>
+        <item> Лист </item>
+    </string-array>
+</resources>
