@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { setValueToArray().sorted() }
+                                measureTimedValue { setValueToArray().sort() }
                             val timingFromArraySorted =
                                 measureTimedValue { bubbleSortArray(setValueToArray()) }
                             tvTimeInfo.text =
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { setValueToArray().sorted() }
+                                measureTimedValue { setValueToArray().sort() }
                             val timingFromArraySorted =
                                 measureTimedValue { cocktailSortArray(setValueToArray()) }
                             tvTimeInfo.text =
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { setValueToArray().sorted() }
+                                measureTimedValue { setValueToArray().sort() }
                             val timingFromArraySorted =
                                 measureTimedValue { sortShell(setValueToArray()) }
                             tvTimeInfo.text =
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { setValueToArray().sorted() }
+                                measureTimedValue { setValueToArray().sort() }
                             val timingFromArraySorted =
                                 measureTimedValue { insertionSortArray(setValueToArray()) }
                             tvTimeInfo.text =
@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { list.sorted() }
+                                measureTimedValue { list.sort() }
                             val timingFromListSorted =
                                 measureTimedValue { bubbleSortList(list) }
                             tvTimeInfo.text =
@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { list.sorted() }
+                                measureTimedValue { list.sort() }
                             val timingFromListSorted =
                                 measureTimedValue { cocktailSortList(list) }
                             tvTimeInfo.text =
@@ -182,7 +182,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { list.sorted() }
+                                measureTimedValue { list.sort() }
                             val timingFromListSorted =
                                 measureTimedValue { sortShellList(list) }
                             tvTimeInfo.text =
@@ -203,7 +203,7 @@ class MainActivity : AppCompatActivity() {
                             tvSorted.movementMethod = ScrollingMovementMethod()
                             tvTime.visibility = View.VISIBLE
                             val timingFromSystemSorted =
-                                measureTimedValue { list.sorted() }
+                                measureTimedValue { list.sort() }
                             val timingFromListSorted =
                                 measureTimedValue { insertionSortList(list) }
                             tvTimeInfo.text =
