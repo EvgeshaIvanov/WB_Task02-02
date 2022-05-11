@@ -1,12 +1,14 @@
 package com.example.analysisofalgorithmsapp
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.analysisofalgorithmsapp.databinding.ActivityMainBinding
 import java.lang.System.currentTimeMillis
 import kotlin.random.Random
@@ -18,7 +20,7 @@ import kotlin.time.measureTimedValue
 import kotlin.time.toDuration
 
 class MainActivity : AppCompatActivity() {
-
+    //инструкция в файле Readme
     private lateinit var binding: ActivityMainBinding
 
     @OptIn(ExperimentalTime::class)
@@ -26,6 +28,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.tutorialButton.setOnClickListener {
+            val dialog = AlertDialog.Builder(this)
+                .setCancelable(true)
+                .setTitle("Инструкция")
+                .setItems(R.array.tutorials) { _, _ -> }
+                .create()
+            dialog.show()
+        }
         binding.buttonSort.setOnClickListener {
             if (binding.choosingStructure.text.contains("Массив")) {
                 with(binding.sortingSelection.text) {
@@ -118,7 +128,8 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
-            } else if (binding.choosingStructure.text.contains("Лист")) {
+            }
+            else if (binding.choosingStructure.text.contains("Лист")) {
                 with(binding.sortingSelection.text) {
                     when {
                         contains("Пузырьковая сортировка") -> binding.apply {
@@ -217,6 +228,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
+            else Toast.makeText(this,"Ничего не выбрано", Toast.LENGTH_SHORT).show()
         }
     }
 

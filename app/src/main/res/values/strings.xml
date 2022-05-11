@@ -10,4 +10,10 @@
         <item> Массив </item>
         <item> Лист </item>
     </string-array>
+    <string-array name="tutorials">
+        <item> 1. Ввести кол-во данных в хранилище</item>
+        <item> 2. Выбрать алгоритм сортировки</item>
+        <item> 3. Выбрать структуру данных</item>
+        <item> 4. Рассчитать</item>
+    </string-array>
 </resources>
